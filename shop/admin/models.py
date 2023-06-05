@@ -1,4 +1,4 @@
-from shop import db
+from shop import db, app
 
 
 class User(db.Model):
@@ -10,7 +10,9 @@ class User(db.Model):
     profile = db.Column(db.String(180), unique=False, nullable=False, default='profile.jpg')
 
     def __repr__(self):
-        return '<User %r' % self.username
+        return '<User %r>' % self.username
 
 
-db.create_all()
+with app.app_context():
+    db.create_all()
+
