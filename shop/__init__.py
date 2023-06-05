@@ -12,3 +12,4 @@ db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
 from shop.admin import routes 
+from shop.products import routes
