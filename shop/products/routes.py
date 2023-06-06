@@ -46,5 +46,7 @@ def updatecat(id):
 
 @app.route('/addproduct', methods=['POST','GET'])
 def addproduct():
+    brands = Brand.query.all()
+    categories = Category.query.all()
     form = AddProducts(request.form)
-    return render_template('products/addproduct.html', title="Add Product page", form=form)
+    return render_template('products/addproduct.html', form=form, title="Add product", brands=brands, categories=categories)

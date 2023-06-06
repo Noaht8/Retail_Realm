@@ -9,13 +9,30 @@
     <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <h2 class="text-center">Add a Product</h2>
+        <h2 class="text-center bf-info p-2">Add a Product</h2>
         {% from "_formhelpers.html" import render_field %}
         <form action="" method="POST" enctype="multipart/form-data">
             {{render_field(form.name, class="form-control", placeholders="Add product name")}}
             {{render_field(form.price, class="form-control", placeholders="Add product price")}}
             {{render_field(form.discount, class="form-control", placeholders="Add product discount")}}
             {{render_field(form.stock, class="form-control", placeholders="Add product stock")}}
+
+            <label for="brand">Add a Brand</label>
+            <select name="brand" id="brand" class="form-control" required>
+                <option value="">Select a Brand</option>
+                {% for brand in brands %}
+                <option value="brand.id">{{brand.name}}</option>
+                {% endfor %}
+            </select>
+
+            <label for="category">Add a Category</label>
+            <select name="category" id="category" class="form-control" required>
+                <option value="">Add a Category</option>
+                {% for category in categories %}
+                <option value="category.id">{{category.name}}</option>
+                {% endfor %}
+            </select>
+
             {{render_field(form.colors, class="form-control", placeholders="Add product colors")}}
             {{render_field(form.description, class="form-control", placeholders="Add product detail", rows="10")}}
 
