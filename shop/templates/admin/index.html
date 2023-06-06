@@ -1,6 +1,88 @@
-{% extends 'layout.html'%}
+{% extends 'layout.html' %}
 {% block content %}
-<h2>Hello</h2>
-{% include '_messages.html'%}
+<div class="container">
+  <header class="header">
+    <div class="row align-items-center text-center">
+      <div class="col">
+        <h1 class="display-4">Retail Realm</h1>
+        <p class="lead">The all-in-one ecommerce solution for businesses of all sizes.</p>
+        <button class="btn btn-success me-2" onclick="register()">Register</button>
+        <button class="btn btn-outline-secondary" onclick="login()">Login</button>
+      </div>
+    </div>
+  </header>
 
+  <!-- Features Section -->
+  <section class="features py-5">
+    <h2 class="text-center mb-4">Features</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="IM.jpg" class="card-img-top" alt="Feature 1">
+          <div class="card-body">
+            <h5 class="card-title">Inventory Management</h5>
+            <p class="card-text">Keep track of your inventory in real-time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="OM.jpg" class="card-img-top" alt="Feature 2">
+          <div class="card-body">
+            <h5 class="card-title">Order Management</h5>
+            <p class="card-text">Manage orders from multiple sales channels in one place.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="CM.jpg" class="card-img-top" alt="Feature 3">
+          <div class="card-body">
+            <h5 class="card-title">Customer Management</h5>
+            <p class="card-text">Keep track of customer data and order history.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials py-5 bg-light">
+    <h2 class="text-center mb-4">Testimonials</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <blockquote class="blockquote">
+          <p class="mb-0">"Great service and amazing features. Retail Realm has helped our business grow."</p>
+          <br>
+          <footer class="blockquote-footer">John Doe, <cite title="Company 1">Company 1</cite></footer>
+        </blockquote>
+      </div>
+      <div class="col-md-6">
+        <blockquote class="blockquote">
+          <p class="mb-0">"Retail Realm has made managing our online store a breeze. Highly recommended!"</p>
+          <br>
+          <footer class="blockquote-footer">Jane Smith, <cite title="Company 2">Company 2</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="cta py-5">
+    <div class="row">
+      <div class="col text-center">
+        <h2>Ready to get started?</h2>
+        <p>Join Retail Realm today and take your business to the next level.</p>
+        <button class="btn btn-success" onclick="register()">Register Now</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer py-3 bg-dark text-white">
+    <div class="container">
+      <p class="text-center mb-0">&copy; 2023 Retail Realm. All rights reserved.</p>
+    </div>
+</footer>
+{% include '_messages.html' %}
 {% endblock content %}
