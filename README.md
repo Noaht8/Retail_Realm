@@ -8,7 +8,7 @@ RetailRealm is designed to help businesses manage their online stores, inventory
 To install RetailRealm, follow these steps:
 
 1. Clone the repository:
-`git clone https://github.com/your-username/RetailRealm.git`
+`git clone https://github.com/Noaht8/Retail_Realm.git`
 
 2. Install the required libraries:
 
